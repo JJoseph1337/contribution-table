@@ -1,0 +1,7 @@
+.Cell {
+  width: 15px;
+}
+
+.Cell:hover {
+  border: 1px solid #000;
+}

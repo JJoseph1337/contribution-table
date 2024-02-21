@@ -1,0 +1,40 @@
+.App {
+  padding: 20px;
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.Tooltip {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #000;
+  color: #fff;
+
+  text-align: center;
+
+  border-radius: 3px;
+  gap: 4px;
+  padding: 6px;
+
+  transform: translate(-50%, calc(-115% - 15px));
+}
+
+.Tooltip__header {
+  font-size: 12px;
+}
+
+.Tooltip__description {
+  font-size: 10px;
+  color: #7c7c7c;
+}
+
+thead > tr > td {
+  text-transform: capitalize;
+}
