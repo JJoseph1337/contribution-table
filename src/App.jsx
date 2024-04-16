@@ -42,7 +42,6 @@ function App() {
     e.stopPropagation();
 
     const cell = e.target;
-    console.log(e.clientX, e.clientY);
     const date = cell.getAttribute("data-date");
     const tooltip = document.querySelector(".Tooltip");
     const main = document.getElementById("main");
@@ -60,7 +59,8 @@ function App() {
         } contributions</span>
         <span class="Tooltip__description">${format(
           new Date(date),
-          "PPPP", {locale: ru}
+          "PPPP",
+          { locale: ru }
         )}</span>
       `;
       tooltip.setAttribute(
@@ -71,6 +71,7 @@ function App() {
       main.appendChild(tooltip);
     }
   };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -109,7 +110,6 @@ function App() {
               <td height={15}>
                 {[1, 3, 5].includes(week.id) && week.name}
               </td>
-
               {getWeeks(week.id).map((value, index) => {
                 if (index === 51) {
                   const shouldRender =
